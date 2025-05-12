@@ -1,3 +1,4 @@
+
 <p align="center">
   <img src="image.png" alt="Degen AI Banner" />
 </p>
@@ -39,6 +40,18 @@ It continuously monitors your wallet activity, analyzes every trade (entry + exi
 
 ---
 
+## 🧠 System Architecture
+
+```mermaid
+graph TD
+A[Wallet Transactions] --> B[Trade Analyzer]
+B --> C[Pattern Model]
+C --> D[Insight Generator]
+D --> E[API / CLI Output]
+```
+
+---
+
 ## 🧪 Example Output
 
 ```json
@@ -49,3 +62,64 @@ It continuously monitors your wallet activity, analyzes every trade (entry + exi
   "cluster_behavior": "Mid-tier sniper",
   "suggestion": "Reduce buys during green candle clusters. Typical PnL decays after initial entry."
 }
+```
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone https://github.com/degen-ai/engine.git
+cd engine
+pip install -r requirements.txt
+```
+
+---
+
+## 🚀 Run the Engine
+
+```bash
+python3 core/orchestrator.py
+```
+
+---
+
+## 🌐 API Mode
+
+```bash
+uvicorn interface.api:app --reload
+```
+
+---
+
+## 🧪 Testing
+
+To run unit tests:
+
+```bash
+pytest test/
+```
+
+Mock data and test wallets are available in `/test/fixtures/`.
+
+---
+
+## 📁 Project Structure
+
+```
+degen-ai/
+├── core/
+├── strategy/
+├── analysis/
+├── wallets/
+├── insights/
+├── data/
+├── interface/
+└── README.md
+```
+
+---
+
+## 📜 License
+
+MIT License. Use freely, but attribution is appreciated.
